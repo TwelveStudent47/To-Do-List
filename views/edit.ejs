@@ -1,0 +1,20 @@
+<%- include("partials/header-task-creation.ejs") %>
+<div class="container">
+  <h1>Edit Task</h1>
+  <form action="/task/<%= id %>?_method=PATCH" method="POST">
+    <div class="mb-3">
+      <label>Title</label>
+      <input class="form-control" type="text" name="title" value="<%= task.taskTitle %>" required>
+    </div>
+    <div class="mb-3">
+      <label>Due Date</label>
+      <input class="form-control" type="date" name="date" value="<%= task.taskDue %>" required>   
+    </div>
+    <div class="mb-3">
+      <label>Type</label>
+      <input class="form-control" type="text" name="type" value="<%= task.taskType %>" required>
+    </div>
+    <button type="submit" class="btn btn-success">Update</button>
+  </form>
+</div>
+<%- include("partials/footer.ejs") %>

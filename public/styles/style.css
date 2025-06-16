@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #C8F7C5;
+    scroll-behavior: smooth;
+}
+
+.mt-custom-1 {
+    margin-top: 100px;
+}
+
+.rounded-custom {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.rounded-custom-footer {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.bg-nav {
+    background-color: #4CAF50;
+}
+
+.navbar-brand {
+    color: #fff;
+    font-weight: 600;
+    transition: .3s all ease;
+}
+
+.navbar-brand:hover {
+    color: lightgray;
+}
+
+.new-task {
+    background-color: #66BB6A;
+    color: #fff;
+    font-weight: 400;
+    transition: .3s all ease;
+}
+
+.new-task:hover {
+    background-color: #479e4d;
+    color: lightgray;
+}
+
+.nav-shadow {
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1),
+    4px 0 10px rgba(0, 0, 0, 0.1),
+    0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-bg {
+    background-color: #C8F7C5;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-text{
+    color: #1B5E20;
+    text-align: center;
+}
+
+.no-bg {
+    background-color: #C8F7C5;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-creation {
+    background-color: #E5FFE4;
+    display: flex;
+    flex-direction: column;
+    padding: 45px 100px;
+    border-radius: 5px;
+}
+
+.task-creation input {
+    width: 450px;
+    margin-bottom: 25px;
+}
+
+.list-bg {
+    background-color: #E5FFE4;
+    border-radius: 10px;
+}
+
+.hd { 
+    visibility: hidden;
+}
+
+.card-custom {
+    width: 450px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.task-title {
+    color: #1B5E20;
+    font-size: 1.8rem;
+    margin-top: 15px;
+}
+
+.task-type {
+    color: #2E7D32;
+    font-size: 1.1rem;
+    background-color: #C8F7C5;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.task-due {
+    color: #2E7D32;
+    font-size: 1rem;
+}
+
+.checked-btn {
+    color: #2E7D32;
+    font-size: 2rem;
+}
+
+.edit-btn {
+    font-size: 1.5rem;
+    color: #388E3C;
+    transition: .3s all ease;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    transform: scale(1.5);
+    color: #2c7030;
+}
+
+.delete-btn {
+    font-size: 1.5rem;
+    color: #C62828;
+    cursor: pointer;
+    transition: .3s all ease;
+    border: none;
+    background-color: transparent;
+}
+
+.delete-btn:hover {
+    transform: scale(1.5);
+    color: #982020;
+}
+
+.card-custom a {
+    text-decoration: none;
+}
+
+.create-btn {
+    background-color: #C8F7C5;
+    border: none;
+    border-radius: 10px;
+    transition: .3s all ease;
+}
+
+.create-btn:hover {
+    background-color: #2E7D32;
+    color: white;
+}
+
+@media screen and (max-width:767px){
+    .main-bg {
+        display: block;
+    }
+
+    .task-creation input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:575px){
+    .task-creation input{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:472px){
+    .list-bg {
+        width: 100%;
+    }
+}

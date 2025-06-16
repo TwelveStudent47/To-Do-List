@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+<div class="container d-flex flex-column justify-content-center align-items-center">
+    <% if (taskList.length === 0) { %>
+        <div class="container no-bg">
+            <h1 class="no-text">Currently you don't have any task to do.</h1>
+        </div>
+    <% } else { %>
+      <% taskList.forEach((task, index) => { %>
+        <div class="card-custom list-bg mb-3 d-flex align-items-center justify-content-evenly">
+            <div class="content d-flex align-items-center">
+                <input type="checkbox" class="checkbox mx-3">
+                <i class="ri-checkbox-circle-fill checked-btn hd"></i>
+                <ul class="d-flex flex-column mx-3">
+                    <li><h1 class="task-title"><%= task.taskTitle %></h1></li>
+                    <li><h3 class="task-due">Due Date: <%= task.taskDue %></h3></li>
+                    <li><h3 class="task-type"><%= task.taskType %></h3></li>
+                </ul>
+            </div>
+            <a href="/task/<%= index %>/edit" class="edit-btn"><i class="ri-settings-3-fill"></i></a>
+            <form action="/task/<%= index %>?_method=DELETE" method="POST" class="delete-form d-inline">
+                <button type="submit" class="delete-btn"><i class="ri-delete-bin-6-fill "></i></button>
+            </form>
+        </div>
+      <% }); %>
+    <% } %>
+</div>
+<%- include("partials/footer.ejs") %>

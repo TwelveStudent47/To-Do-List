@@ -1,0 +1,12 @@
+<%- include("partials/header-task-creation.ejs") %>
+    <form action="/task-list" method="post" class="task-creation">
+        <h1 class="mb-3 text-center">New Task</h1>
+        <label for="title">Task Title</label>
+        <input type="text" name="title" required>
+        <label for="type">Type</label>
+        <input type="text" name="type" required>
+        <label for="Due Date"></label>
+        <input type="date" name="date" required>
+        <button type="submit" class="create-btn">Submit</button>
+    </form>
+<%- include("partials/footer.ejs") %>
